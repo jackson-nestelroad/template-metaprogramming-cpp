@@ -1,0 +1,5 @@
+.vs
+src/x64
+*.sln
+*.vcxproj
+*.vcxproj.*
