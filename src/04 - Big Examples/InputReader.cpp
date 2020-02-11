@@ -242,19 +242,23 @@ namespace in {
 
 void define_interface() {
     std::vector<int> input1 = in::readFile<in::value<int, ','>>("01.txt");
+
     std::vector<double> input2 = in::readFile<in::value<double, '\n'>>("02.txt");
+
     std::vector<char> input3 = in::readFile<in::value<char>>("03.txt");
+
     std::vector<std::string> input4 = in::readFile<in::line<std::string, '\n'>>("04.txt");
+
     std::vector<std::vector<int>> input5 = 
-    in::readFile<in::line<std::string>, in::value<int, ','>>("05.txt");
+        in::readFile<in::line<std::string>, in::value<int, ','>>("05.txt");
 }
 
-int run_input_reader() {
+int main() {
     auto start = std::chrono::system_clock::now().time_since_epoch();
     
-    auto input1 = in::readFile<in::value<int, '\n'>>("04 - Samples/Sample Input/01.txt");
-    auto input2 = in::readFile<in::value<int, ','>>("04 - Samples/Sample Input/02.txt");
-    auto input3 = in::readFile<in::line<>, in::line<std::string, ')'>, in::value<char, 0>>("04 - Samples/Sample Input/03.txt");
+    auto input1 = in::readFile<in::value<int, '\n'>>("04 - Big Examples/Sample Input/01.txt");
+    auto input2 = in::readFile<in::value<int, ','>>("04 - Big Examples/Sample Input/02.txt");
+    auto input3 = in::readFile<in::line<>, in::line<std::string, ')'>, in::value<char, 0>>("04 - Big Examples/Sample Input/03.txt");
 
     auto end = std::chrono::system_clock::now().time_since_epoch();
     auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
