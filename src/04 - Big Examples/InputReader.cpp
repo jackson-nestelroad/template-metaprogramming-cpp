@@ -251,6 +251,9 @@ void define_interface() {
 
     std::vector<std::vector<int>> input5 = 
         in::readFile<in::line<std::string>, in::value<int, ','>>("05.txt");
+
+    std::vector<std::vector<std::vector<char>>> input6 =
+        in::readFile<in::line<>, in::line<std::string, ')'>, in::value<char, 0>>("06.txt");
 }
 
 int main() {

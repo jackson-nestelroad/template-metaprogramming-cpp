@@ -117,6 +117,5 @@ int run_tuple() {
     std::cout << get<0>(myTuple) << std::endl;
     std::cout << get<1>(myTuple) << std::endl;
     std::cout << get<std::string>(myTuple) << std::endl;
-
     return 0;
 }

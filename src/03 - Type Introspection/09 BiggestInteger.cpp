@@ -32,7 +32,9 @@ struct biggest_int<T> : biggest_int<T, T> { };
 // Two integers
 template <typename T1, typename T2>
 struct biggest_int<T1, T2>
-    : biggest_int_impl<all_integral<T1, T2>::value, T1, T2> { };
+    : biggest_int_impl<std::conjunction<
+        std::is_integral<T1>, std::is_integral<T2>
+    >::value, T1, T2> { };
 
 // More than two integers
 template <typename T1, typename T2, typename... Ts>
