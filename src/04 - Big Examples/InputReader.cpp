@@ -256,7 +256,7 @@ void define_interface() {
         in::readFile<in::line<>, in::line<std::string, ')'>, in::value<char, 0>>("06.txt");
 }
 
-int main() {
+int run_input_reader() {
     auto start = std::chrono::system_clock::now().time_since_epoch();
     
     auto input1 = in::readFile<in::value<int, '\n'>>("04 - Big Examples/Sample Input/01.txt");
